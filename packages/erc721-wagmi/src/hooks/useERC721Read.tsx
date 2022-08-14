@@ -7,14 +7,12 @@ export function useERC721Read(
   args: any[]
 ): any {
   return useLogContractRead(
-    useContractRead(
-      {
-        addressOrName: address,
-        contractInterface: erc721ABI,
-        functionName: method,
-        args: args,
-      },
-    )
+    useContractRead({
+      addressOrName: address,
+      contractInterface: erc721ABI,
+      functionName: method,
+      args: args,
+    })
   );
 }
 

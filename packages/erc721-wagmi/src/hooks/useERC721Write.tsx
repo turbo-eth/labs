@@ -13,11 +13,10 @@ export function useERC721Write(
     functionName: method,
     args: args,
     overrides: overrides,
-    ...configs
-  })
+    ...configs,
+  });
 
-
-  return useContractWrite(config)
+  return useContractWrite(config);
 }
 
 export default useERC721Write;

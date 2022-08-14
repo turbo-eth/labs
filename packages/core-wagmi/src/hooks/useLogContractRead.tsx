@@ -5,7 +5,7 @@ export function useLogContractRead(initialized: any): any {
     console.log(initialized.error);
   }, [initialized.error]);
 
-  return initialized
+  return initialized;
 }
 
 export default useLogContractRead;

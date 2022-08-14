@@ -10,11 +10,10 @@ import ModuleComponentPreview from "@/components/ModuleComponentPreview";
 import { Main } from "@/templates/Main";
 import { Meta } from "@/templates/Meta";
 import { AppConfig } from "@/utils/AppConfig";
-import { useNetworkContract } from "@turbo-lab/deployments";
 // import { MintTokenButton } from "@turbo-lab/framework";
 
 const Index = () => {
-  const contract = useNetworkContract("localhost", "TurboToken");
+  const add = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2";
   return (
     <Main
       meta={
@@ -36,7 +35,7 @@ const Index = () => {
       </div>
       <section className="py-20">
         <div className="container mx-auto max-w-screen-xl">
-          <Examples address={contract?.address} />
+          <Examples address={add} />
         </div>
       </section>
     </Main>

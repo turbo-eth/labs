@@ -13,9 +13,9 @@ export function useERC20Write(
     functionName: method,
     args: args,
     overrides: overrides,
-    ...configs
-  })
-  return useContractWrite(config)
+    ...configs,
+  });
+  return useContractWrite(config);
 }
 
 export default useERC20Write;

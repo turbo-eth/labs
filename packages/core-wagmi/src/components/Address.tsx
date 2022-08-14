@@ -1,6 +1,6 @@
 import * as React from 'react';
 import classNames from 'classnames';
-import truncateAddress from './utils/truncateAddress';
+import truncateAddress from '../utils/truncateAddress';
 
 interface AddressProps {
   className?: string;

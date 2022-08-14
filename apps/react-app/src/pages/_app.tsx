@@ -13,7 +13,12 @@ import { publicProvider } from "wagmi/providers/public";
 import IsMounted from "@/components/IsMounted";
 import { AppConfig } from "@/utils/AppConfig";
 import { ModalProvider } from "react-modal-hook";
-import { ALCHEMY_ID, ENABLE_TESTNETS, FORKING_ENALED, NODE_ENV } from "@/utils/constants";
+import {
+  ALCHEMY_ID,
+  ENABLE_TESTNETS,
+  FORKING_ENALED,
+  NODE_ENV,
+} from "@/utils/constants";
 import { jsonRpcProvider } from "wagmi/providers/jsonRpc";
 
 const { chains, provider, webSocketProvider } = configureChains(
@@ -34,12 +39,13 @@ const { chains, provider, webSocketProvider } = configureChains(
             http: "http://127.0.0.1:8545",
           }),
         }),
-        publicProvider()
+        publicProvider(),
         // alchemyProvider({ alchemyId: ALCHEMY_ID }),
       ]
     : [
-      // alchemyProvider({ alchemyId: ALCHEMY_ID }), 
-      publicProvider()]
+        // alchemyProvider({ alchemyId: ALCHEMY_ID }),
+        publicProvider(),
+      ]
 );
 
 const { wallets } = getDefaultWallets({
