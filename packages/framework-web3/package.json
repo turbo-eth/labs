@@ -1,7 +1,7 @@
 {
-  "name": "@turbo-eth/erc20-wagmi",
-  "author": "kames",
-  "module": "dist/erc20-wagmi.esm.js",
+  "name": "@turbo-eth/framework-web3",
+  "author": "Kames Geraghty",
+  "module": "dist/framework.esm.js",
   "version": "0.0.0-beta.0",
   "license": "MIT",
   "main": "dist/index.js",
@@ -23,6 +23,11 @@
     "analyze": "size-limit --why",
     "clean": "rm -rf node_modules/"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
   "prettier": {
     "printWidth": 80,
     "semi": true,
@@ -31,23 +36,21 @@
   },
   "size-limit": [
     {
-      "path": "dist/erc20-wagmi.cjs.production.min.js",
+      "path": "dist/framework.cjs.production.min.js",
       "limit": "10 KB"
     },
     {
-      "path": "dist/erc20-wagmi.esm.js",
+      "path": "dist/framework.esm.js",
       "limit": "10 KB"
     }
   ],
   "devDependencies": {
     "@babel/core": "7.18.5",
     "@size-limit/preset-small-lib": "^7.0.8",
-    "@turbo-eth/core-wagmi": "0.0.0-beta.2",
     "@types/node": "^18.0.0",
     "@types/prop-types": "^15.7.5",
     "@types/react": "^18.0.14",
     "@types/react-dom": "18.0.5",
-    "ethers": "5.5.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "size-limit": "^7.0.8",
@@ -56,15 +59,11 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
-    "classnames": "2.3.1",
     "prop-types": "15.8.1",
-    "react-hook-form": "^7.27.1",
     "wagmi": "0.6.3"
   },
   "peerDependencies": {
-    "ethers": "5.5.1",
     "@rainbow-me/rainbowkit": "0.4.6",
-    "@babel/core": "7.18.5",
     "wagmi": "0.6.3"
   }
 }
